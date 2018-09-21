@@ -1,8 +1,66 @@
 .overlined
 {
-    text-decoration:line-through;
+    text-decoration:line-through    ;
 }
 .normal
 {
     text-decoration:none;
+}
+
+#addtask, #deletetask, #sorttask
+{
+    padding: 9px;
+    font-size:30px;
+}
+h2{
+    font-style: italic;
+    font-size:40px;
+    color:slateblue;
+    text-align: center;
+}
+
+ul li{
+    width:50%;
+    text-align: left;
+    padding :5px;
+    list-style-type:none;
+    font-family: 'Courier New', Courier, monospace;
+    font: 20px bold;
+    background-color: aquamarine;
+    margin: 10px;   
+}
+
+li button, li i
+{
+    margin: 20px;
+    float: right;
+}
+.fa 
+ {
+     font-size: 30px;
+ }
+
+button:disabled {
+     opacity: 0.4;
+ }
+#newtask
+{
+    padding: 10px;
+    border-radius: 5px;
+    width:40%;
+    border:0.5px solid lightgrey;
+}
+
+input[type="checkbox"]
+{
+  width: 30px; /*Desired width*/
+  height: 30px; /*Desired height*/
+  cursor: pointer;
+  margin: 20px;
+}
+
+div#todo
+{
+    margin-left: 10%;
+    margin-right: 10%;
 }
