@@ -3,21 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css" type="text/css">
   <script src="script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>ToDoList</title>
 </head>
 
 <body>
+ <div id="todo">
   <h2>Todo List</h2>
-  <input id="newtask">
-  <button id="addtask">ADD</button>
-  <button id="deletetask">DELETE</button>
-  <button id="sorttask">SORT</button>
+  <input id="newtask" onfocus="this.value=''" placeholder="Please Add the input">
+  <i id="addtask"></i>
+  <i id="deletetask"></i>
+  <i id="sorttask"></i>
   <ul id="tasklist"></ul>
 
-  
+</div>
 </body>
 
 </html>

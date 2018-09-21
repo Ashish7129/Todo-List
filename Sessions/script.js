@@ -2,9 +2,12 @@ window.onload = function()
 {
 let newtask = document.getElementById('newtask')
 let addtask = document.getElementById('addtask')
+addtask.className = "fa fa-plus-square"
 let tasklist = document.getElementById('tasklist')
 let deletetask = document.getElementById('deletetask')
+deletetask.className = "fa fa-minus-square"
 let sorttask = document.getElementById('sorttask')
+sorttask.className ="fa fa-sort"
 
 //array for storing the data 
 var array = []
@@ -15,16 +18,23 @@ console.log(array)
 addtask.onclick = function () {
  var newArray ={}
  let item = newtask.value
+ if(item == ""){
+   alert("please enter the task")
+   return false;
+}
  let newtasklistitem = document.createElement("li")
  newtasklistitem.innerText = item
  newtasklistitem.id = count
  let upButton = document.createElement("button")
- upButton.textContent ="UP"
+ upButton.className = "fa fa-level-up"
  //upButton.disabled = true
+
  let downButton = document.createElement("button")
- downButton.textContent ="DOWN"
- let crossButton = document.createElement("button")
- crossButton.textContent ="CROSS"
+ downButton.className = "fa fa-level-down"
+
+ let crossButton = document.createElement("i")
+ crossButton.className = "fa fa-trash"
+
  let checkbox = document.createElement("input")
  checkbox.type = "checkbox"
  //checkbox.onchange = dochange(this.parentElement)
@@ -143,9 +153,9 @@ checkbox.addEventListener("change", function(event){
 // sort the checked tasks
   sorttask.onclick = function () {
     document.querySelectorAll("input:checked[type=checkbox]").
-    forEach(e => e.parentNode.parentNode.insertBefore(e.parentNode,e.parentNode.parentNode.firstChild))
+    forEach(e => e.parentNode.parentNode.insertBefore(e.parentNode,null))
     document.querySelectorAll("input:checked[type=checkbox]").
-    forEach(e => e.parentNode.parentNode.insertBefore(e.parentNode,e.parentNode.parentNode.firstChild))
+    forEach(e => e.parentNode.parentNode.insertBefore(e.parentNode,null))
     changeTheStructure()
   }
 
