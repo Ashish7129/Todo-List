@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+    .done
+    {
+        text-decoration: line-through;
+        color: blue;
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day3</title>
+</head>
+<body>
+<!-- <div id ="app">
+    <h1>{{title}}</h1>
+    <button @click = "Uppercase">UpperCase</button>
+    <button @click = "Lowercase">LowerCase</button>
+
+
+    <input v-model="username">
+    <p>Hello {{username}}</p>
+  </div> -->
+
+
+
+  <!--
+      v-on  use @
+      v- use :
+      for shorthands
+
+  -->
+  <div id="todo">
+      <input v-model="newtask">
+      <button @click="addtask">ADD</button>
+      <ul>
+          <li v-for ="task in tasklist">
+              <!--use strike as a tag instead of line through-->
+            <!-- <span v-if="task.done" style="text-decoration:line-through">{{task.name}}</span> -->
+            <span :class="{done:task.done}">{{task.name}}</span>
+            <!-- <span v-else>{{task.name}}</span> -->
+           <input type="checkbox" v-model="task.done">
+          </li>
+          
+      </ul>
+  </div>
+</body>
+</html>
